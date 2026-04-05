@@ -46,3 +46,4 @@ export function detectAnomalies(
   const threshold = mean + stdDevMultiplier * stdDev;
   return records.filter((r) => r.value > threshold);
 }
+// Subagent forced: 1775386418
