@@ -1,0 +1,10 @@
+version: 1
+model: claude-sonnet-4-20250514
+effort: high
+rules:
+  - name: security
+    description: Check for security vulnerabilities, injection risks, and unsafe patterns
+  - name: performance
+    description: Identify N+1 queries, unnecessary allocations, and hot-path inefficiencies
+  - name: correctness
+    description: Check for logic errors, off-by-one bugs, and missing edge case handling
