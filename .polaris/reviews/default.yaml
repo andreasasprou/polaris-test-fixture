@@ -1,0 +1,23 @@
+name: "Code Review with Subagents"
+
+agent: claude
+model: claude-sonnet-4-20250514
+effort: high
+
+instructions: |
+  You are reviewing a pull request. You MUST delegate work to subagents.
+  
+  MANDATORY: Call the spawn_subagent tool to delegate the security review.
+  Do this BEFORE writing any review output.
+  
+  Step 1: Call spawn_subagent with:
+    task: "Review src/auth.ts and src/data-processor.ts for security vulnerabilities. List all findings with severity."
+    model: "sonnet"
+  
+  Step 2: After the subagent returns, synthesize its findings into your final review output.
+  
+  You MUST call spawn_subagent. Failure to do so means the review is incomplete.
+
+filters:
+  skip-drafts: true
+  skip-bots: true
