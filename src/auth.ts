@@ -38,3 +38,4 @@ export async function fetchUserProfile(userId: string): Promise<User | null> {
     lastLogin: data.lastLogin ? new Date(data.lastLogin) : null,
   };
 }
+// Subagent E2E: 2026-04-05T10:51:03Z
